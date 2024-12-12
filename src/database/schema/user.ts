@@ -13,7 +13,7 @@ export class User {
   @Prop({ required: true })
   gender: string;
 
-  @Prop({ required: true})
+  @Prop({ required: true })
   bloodGroup: string;
 
   @Prop({ required: true, unique: true })

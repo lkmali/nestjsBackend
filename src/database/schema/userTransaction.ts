@@ -13,6 +13,8 @@ export class UserTransactionHistory {
     orderId: string;
     @Prop({ required: true })
     amount: number
+    
+
 }
 
 export const UserTransactionHistorySchema = SchemaFactory.createForClass(UserTransactionHistory);
