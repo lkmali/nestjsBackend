@@ -1,0 +1,10 @@
+services: # services which our app going to use. (list of containers we want to create)
+  backend:
+    restart: always
+    build:
+      context: ./
+      dockerfile: dockerfile
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    ports:
+      - "3000:3000"

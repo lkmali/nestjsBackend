@@ -1,0 +1,31 @@
+{
+    "name": "jaldiDoBackend",
+    "append_env_to_name": true,
+    "cwd": "./",
+    "script": "./dist/main.js",
+    "watch": false,
+    "exec_mode": "cluster",
+    "instances": "max",
+    "listen_timeout": 30000,
+    "exp_backoff_restart_delay": 3000,
+    "node_args": [
+      "--optimize_for_size",
+      "--max-old-space-size=8096",
+      "--max-semi-space-size=1024",
+      "--gc-interval=100",
+      "--nouse-idle-notification"
+    ],
+    "ignore_watch": [
+      "**/*.log",
+      "public"
+    ],
+    "max_memory_restart": "8096M",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "env_development": {
+      "watch": true,
+      "NODE_ENV": "development"
+    }
+  }
+  
