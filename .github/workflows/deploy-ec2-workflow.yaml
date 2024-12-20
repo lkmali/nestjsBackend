@@ -15,8 +15,8 @@ jobs:
          DOCKER_PASSWORD: ${{ secrets.DOCKER_HUB_PASSWORD }}
        run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 
      - name : docker image build
-       run : docker build -t nestJs/node-js-app .
+       run : docker build -t nest-js-test .
      - name: Publish image to docker hub 
-       run: docker push nestJs/node-js-app:latest  
+       run: docker push nest-js-test:latest  
   
  
