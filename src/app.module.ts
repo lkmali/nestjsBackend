@@ -16,7 +16,7 @@ import {LoggerModule} from 'nestjs-pino';
 @Module({
     imports: [
     ConfigModule.forRoot({
-        isGlobal: true, // Makes the configuration available globally
+        isGlobal: true,  // Makes the configuration available globally
       }),
       LoggerModule.forRoot({
         pinoHttp:{
